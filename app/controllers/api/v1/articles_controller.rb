@@ -10,6 +10,7 @@ class Api::V1::ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    @article = Article.find(params[:id])
     render json: @article
   end
 
